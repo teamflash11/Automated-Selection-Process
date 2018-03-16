@@ -167,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
  //insert into tabel//
  
-   $sql = "INSERT INTO users (fname,lname,gender,email,password,confirmp)
+   $sql = "INSERT INTO register (fname,lname,gender,email,password,confirmp)
     VALUES ('$fname','$lname','$gender','$email','$psw','$psw1')";
 
   if ($con->query($sql) === TRUE) 
