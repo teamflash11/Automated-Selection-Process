@@ -8,22 +8,6 @@
 <body>  
 
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "loginasp"
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-
-
-
 // define variables and set to empty values
 $nameErr = $passwordErr = "";
 $name = $password = "";
@@ -52,33 +36,14 @@ function test_input($data) {
 ?>
 
 <h2>PHP Form Validation Example</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Username: <input type="text" name="name" value="<?php echo $name;?>">
+<form method="post" action="login1.php"> 
+  Username: <input type="text" name="name">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
-  Password: <input type="text" name="password" value="<?php echo $password;?>">
+  Password: <input type="text" name="password">
   <span class="error">* <?php echo $passwordErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
-
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $password;
-echo "<br>";
-$sql = "INSERT INTO login (username, password)
-VALUES ('$name', '$password')";
-
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-mysqli_close($conn);
-
-?>
-
 </body>
 </html>
