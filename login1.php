@@ -1,10 +1,10 @@
 <?php
 include "connect.php";
-$servername = "localhost";
-$username = "root";
-$dbname = "loginasp"
-$name=$_POST['name'];
-$password=$_POST['password'];
+//$name=$_POST['name'];
+//$password=$_POST['password'];
+$name= (isset($_POST['name']) ? $_POST['name'] : '');
+$password= (isset($_POST['password']) ? $_POST['password'] : '');
+
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";

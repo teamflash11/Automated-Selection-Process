@@ -7,7 +7,7 @@
 </head>
 <body>  
 
-<?php
+/*<?php
 // define variables and set to empty values
 $nameErr = $passwordErr = "";
 $name = $password = "";
@@ -34,9 +34,9 @@ function test_input($data) {
   return $data;
 }
 ?>
-
+*/
 <h2>PHP Form Validation Example</h2>
-<form method="post" action="login1.php"> 
+<form method="POST" action="login1.php"> 
   Username: <input type="text" name="name">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
