@@ -102,7 +102,7 @@ button:hover {
 }
 </style>
 <body>
-<form action="index.html" style="border:1px solid #ccc" method="POST">
+<form action="register.php" onclick="window.location.href='index.html'" stylestyle="border:1px solid #ccc" method="POST">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
