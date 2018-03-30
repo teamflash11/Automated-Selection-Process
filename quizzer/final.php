@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+include ("database.php");
+?>
 <!doctype html>
 <html>
 <head>
@@ -17,11 +19,19 @@
 		<h2>u r done</h2>
 		<p>congtrats! you have completed the test</p>
 		<p>Final score: <?php echo $_SESSION['score']; ?></p>
+		
 		<?php
+		$score=$_SESSION['score'];
+		$name=$_SESSION['username'];
+		$sql="insert into scores(username,cans) values('$name','$score')";
+		$result=mysqli_query($mysqli,$sql);
+		
+		
+		
 		unset($_SESSION['score']);
 		?>
 		<a href="question.php?n=1" class="start">Take again</a>
-		<a href="index.php" class="start">Home</a>
+		<a href="../Dashboard/dashboard.html" class="start">Home</a>
 		
 		<div>
 	</main>
