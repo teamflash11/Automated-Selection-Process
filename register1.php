@@ -6,16 +6,20 @@ $fname= (isset($_POST['fname']) ? $_POST['fname'] : '');
 $lname= (isset($_POST['lname']) ? $_POST['lname'] : '');
 $gender= (isset($_POST['gender']) ? $_POST['gender'] : '');
 $email= (isset($_POST['email']) ? $_POST['email'] : '');
-$confirmp= (isset($_POST['confirmp']) ? $_POST['confirmp'] : '');
+$confirmp= (isset($_POST['confirmp']) ? $_POST['cpassword'] : '');
 $password= (isset($_POST['password']) ? $_POST['password'] : '');
 
+$q = "select * from users where fname='$fname' && password='$password'";
+$result = mysqli_query($conn,$q);
+$num = mysqli_num_rows($result);
 
- //insert into tabel//
- 
-   $sql = "INSERT INTO users (fname,lname,gender,email,password,confirmp)
+if($num == 1){
+echo "duplicate data";
+}else{
+
+ $qy = "INSERT INTO users (fname,lname,gender,email,password,confirmp)
     VALUES ('$fname','$lname','$gender','$email','$password','$confirmp')";
-
-  if ($conn->query($sql) === TRUE) 
+  if ($conn->query($qy) === TRUE) 
    {
     echo "<script> alert('You Have Been Successfully Registered')</script>";
 	
@@ -24,7 +28,8 @@ $password= (isset($_POST['password']) ? $_POST['password'] : '');
    {
     echo "Error: " . $sql . "<br>" . $conn->error;
     }
+}
 mysqli_close($conn);
-header('Location: theory tempelate/index.html');
+header('Location: template/index.html');
 exit;
 ?>
