@@ -8,7 +8,14 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
         <link rel="stylesheet" href="styles.css">
+<script>
+function save()
+{
+var x=document.getElementById("note-textarea").value;
+x;
 
+}
+</script>
     </head>
     <body>
         <div class="container">
@@ -24,7 +31,7 @@
                 </div>         
                 <button id="start-record-btn" title="Start Recording">Start Recognition</button>
                 <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
-                <button id="save-note-btn" title="Save Note">Save Note</button>   
+                <button id="save-note-btn" title="Save Note" onclick="save()">Save Note</button>   
                 <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
                 
                 <h3>My Notes</h3>
