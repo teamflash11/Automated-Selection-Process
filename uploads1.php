@@ -1,4 +1,4 @@
-<?php
+++<?php
 	if(isset($_POST['submit'])){
 		$file = $_FILES['file'];
 		
@@ -37,4 +37,6 @@
 		}
 		
 	}
+	header('Location: resumescreening.php');
+	
 ?>

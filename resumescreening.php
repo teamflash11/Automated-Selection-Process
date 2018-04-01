@@ -28,5 +28,7 @@ $sql = "INSERT INTO languages (C,Java,Python)
 	$conn->query($sql);
 	
 	
-mysqli_close($conn);
+//mysqli_close($conn);
+
+header('Location: Dashboard/dashboard1.html');
 ?>
