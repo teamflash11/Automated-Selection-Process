@@ -10,9 +10,15 @@ $result = mysqli_query($conn,"select * from users where fname='$name' && passwor
 $num = mysqli_num_rows($result);
 if($num == 1){
 $_SESSION['username'] = $name;
+
 header('Location: Dashboard/dashboard.html');
 }else{
-header('location:abc.html');
+	
+
+				$reason = "failed";
+				header("location:login.php?reason=".$reason);
+
+  echo "<script type='text/javascript'>alert('$message');</script>";
 }
 
 ?>
