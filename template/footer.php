@@ -14,10 +14,10 @@
 						</div>
 						<ul class="icons">
 							<li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+							<li><a href="https://twitter.com/login?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://in.linkedin.com/" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="https://in.pinterest.com/" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							
 						</ul>
 					</div>
 				</div>
