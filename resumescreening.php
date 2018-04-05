@@ -30,5 +30,5 @@ $sql = "INSERT INTO languages (C,Java,Python)
 	
 //mysqli_close($conn);
 
-header('Location: Dashboard/dashboard1.html');
+header('Location: startbootstrap-sb-admin-gh-pages/index.html');
 ?>

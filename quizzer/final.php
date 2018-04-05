@@ -31,7 +31,7 @@ include ("database.php");
 		unset($_SESSION['score']);
 		?>
 		<a href="question.php?n=1" class="start">Take again</a>
-		<a href="../Dashboard/dashboard2.html" class="start">Home</a>
+		<a href="../startbootstrap-sb-admin-gh-pages/index.html" class="start">Home</a>
 		
 		<div>
 	</main>
