@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-<img src="images/i1.gif" top-margin-top="0" width="100%" height="100"></img>
+<img src="images/i1.gif" margin-top="0" width="100%" height="100"></img>
 				
 			</body>
 			</html>
