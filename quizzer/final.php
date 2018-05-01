@@ -16,8 +16,8 @@ include ("database.php");
 	</header>
 	<main>
 		<div class="container">
-		<h2>u r done</h2>
-		<p>congtrats! you have completed the test</p>
+		<h2></h2>
+		<p>Congtrats! you have completed the test</p>
 		<p>Final score: <?php echo $_SESSION['score']; ?></p>
 		
 		<?php
@@ -31,7 +31,7 @@ include ("database.php");
 		unset($_SESSION['score']);
 		?>
 		<a href="question.php?n=1" class="start">Take again</a>
-		<a href="../Dashboard/dashboard2.html" class="start">Home</a>
+		<a href="../startbootstrap-sb-admin-gh-pages/index.html" class="start">Home</a>
 		
 		<div>
 	</main>

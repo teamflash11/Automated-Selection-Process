@@ -1,3 +1,14 @@
+<?php session_start(); 
+if(!isset($_SESSION['username']))
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database="quizzer";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +20,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BizBuzzR Admin</title>
+    <title>TYF</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">BizBuzzR</a>
+                <a class="navbar-brand" href="index.html">TYF</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -88,7 +99,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="../template/index.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -100,54 +111,14 @@
                         <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Employee MIS <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="userform.html">Create New User</a>
-                            </li>
-                            <li>
-                                <a href="all_user.html">All Users</a>
-                            </li>
-                        </ul>
+                       <a href="../file.php" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Upload Resume </a> 
                     </li>
                      <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i>Institute <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo1" class="collapse">
-                            <li>
-                                <a href="instituteform.html">Create New Institute</a>
-                            </li>
-                            <li>
-                                <a href="#">All Institutes</a>
-                            </li>
-                        </ul>
+                        <a href="../quizzer/index.php" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i>Aptitude Test </a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-arrows-v"></i> Client MIS<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo2" class="collapse">
-                            <li>
-                                <a href="create_client.html">Create New Client</a>
-                            </li>
-                            <li>
-                                <a href="all_clients.html">All Clients</a>
-                            </li>
-                        </ul>
+                        <a href="../Speech to Text/index.html" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-arrows-v"></i>Technical Test</a>
                     </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-arrows-v"></i> Meeting<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo3" class="collapse">
-                            <li>
-                                <a href="lookup_mom.html">Lookup MOM</a>
-                            </li>
-                            <li>
-                                <a href="file_tracker.html">Track All Files</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Attendance</a>
-                    </li>
-                    
-
             </div>
             <!-- /.navbar-collapse -->
         </nav>
@@ -160,7 +131,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Pending Follow Ups</small>
+                            Dashboard <small>Know Where You Stand...</small>
                         </h1>
                         
                     </div>
@@ -178,8 +149,8 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
-                                        <div>Today's Follow Ups!</div>
+                                        <div class="huge">15</div>
+                                        <div>Your Latest Score!</div>
                                     </div>
                                 </div>
                             </div>
@@ -194,8 +165,8 @@
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>Pending Follow Ups!</div>
+                                        <div class="huge">!!</div>
+                                        <div>Progress Reports!</div>
                                     </div>
                                 </div>
                             </div>
@@ -211,8 +182,8 @@
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">14</div>
-                                        <div>Future Follow Ups!</div>
+                                        <div class="huge">4</div>
+                                        <div>New Available Tests!</div>
                                     </div>
                                 </div>
                             </div>
