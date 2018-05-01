@@ -1,11 +1,7 @@
+
+<?php include 'database.php'; ?>
 <?php session_start(); 
-if(!isset($_SESSION['username']))
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database="quizzer";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+
 
 ?>
 
@@ -21,7 +17,8 @@ $conn = new mysqli($servername, $username, $password, $database);
     <meta name="author" content="">
 
     <title>TYF</title>
-
+ <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -149,7 +146,7 @@ $conn = new mysqli($servername, $username, $password, $database);
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">15</div>
+                                        <div class="huge">2</div>
                                         <div>Your Latest Score!</div>
                                     </div>
                                 </div>
@@ -199,7 +196,7 @@ $conn = new mysqli($servername, $username, $password, $database);
 
                 <div class="row">
                 
-                
+                <!--
                         <div class="col-lg-6">
                         <h2>Today's Follow Ups</h2>
                         <div class="table-responsive">
@@ -333,7 +330,7 @@ $conn = new mysqli($servername, $username, $password, $database);
                 <!-- /.row -->
 
                 <div class="row">
-                        <div class="col-lg-12">
+                      <!-- <div class="col-lg-12">
                         <h2>Future Follow Ups</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
@@ -393,6 +390,42 @@ $conn = new mysqli($servername, $username, $password, $database);
                         </div>
 
                         </div>
+						-->
+						
+						
+						 <div id="container" style="width: 100%; height: 500px"></div>
+    <script>
+        <!-- chart code will be here -->
+		anychart.onDocumentReady(function() {
+
+  // set the data
+  var data = [
+      {x: "C++", value: 25},
+      {x: "Java", value: 30},
+      {x: "HTML & CSS ", value: 25},
+      {x: "Javascript", value: 20},
+      {x: "Python", value: 15},
+      {x: "PHP", value:35 },
+      {x: "Others", value:14 }
+  ];
+
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Population by Race for the United States: 2010 Census");
+
+  // add the data
+  chart.data(data);
+
+  // display the chart in the container
+  chart.container('container');
+  chart.draw();
+chart.legend().position("right");
+// set items layout
+chart.legend().itemsLayout("vertical");
+});
+    </script>
                 </div>
                 <!-- /.row -->
 
