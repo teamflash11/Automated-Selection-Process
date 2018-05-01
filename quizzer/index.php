@@ -13,10 +13,10 @@
 <title>PHP Quizzer</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
-<body>
+<body bgcolor=#78bfff>
 	<header>
 		<div class="container">
-			<h1>PHP Quizzer</h1>
+			<h1 style="text-align:center;color:#ccccff;">PHP Quizzer</h1>
 		</div>
 	</header>
 	<main>

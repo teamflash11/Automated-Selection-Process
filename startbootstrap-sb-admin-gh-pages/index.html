@@ -1,11 +1,7 @@
+
+<?php include 'database.php'; ?>
 <?php session_start(); 
-if(!isset($_SESSION['username']))
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database="quizzer";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+
 
 ?>
 
@@ -150,7 +146,7 @@ $conn = new mysqli($servername, $username, $password, $database);
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">15</div>
+                                        <div class="huge">2</div>
                                         <div>Your Latest Score!</div>
                                     </div>
                                 </div>
